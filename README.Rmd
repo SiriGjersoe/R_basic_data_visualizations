@@ -40,7 +40,6 @@ ggplot() + geom_point(data = dat, aes(x = vowelOnsetF0, y = midpointF0, shape = 
 ```{r}
 
 ggplot() + geom_point(data = dat, aes(x=midpointF0, y=SlopeF0, shape=Tone, color=Tone), size = 3) +
- #   theme_bw() + scale_color_manual(cbbPalette) +
   ggtitle("Effects of the F0 midpoint and slope of nuclei by tone")  +
   theme_light() +theme(legend.text=element_text(size=rel(1))) +
   theme(plot.title = element_text(hjust = 0.4)) + ylab("F0 slope of nucleus") + xlab("F0 midpoint nucleus") 
