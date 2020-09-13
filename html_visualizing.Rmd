@@ -1,28 +1,32 @@
 ---
-title: "Visualizing"
+title: "Examples of basic data visualizing in phonetics"
 output: html_document
 ---
+
+```{r}
+library(ggplot2)
+```
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+* loading data frame *
+```{r}
+dat <- read.csv("subsetdataLexMidpointF0.csv", sep = ",")
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
 ```
 
-## Including Plots
+# Q plot
+```{r}
+qplot(vowelOnsetF0, midpointF0, data = dat, color = Speaker)
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+# ggplot with some more specifications
+```{r}
+ggplot() + geom_point(data = dat, aes(x = vowelOnsetF0, y = midpointF0, shape = Speaker)) +
+  ggtitle("Midpoint of fundamental frequency")
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
