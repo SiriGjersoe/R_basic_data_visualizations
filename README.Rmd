@@ -1,14 +1,10 @@
 ---
 rmarkdown=TRUE
----
-
----
-output: github_document
----
+---s
 
 ---
 title: "Examples of basic data visualizing in phonetics"
-output: html_document
+output: github_documents
 ---
 
 ```{r}
