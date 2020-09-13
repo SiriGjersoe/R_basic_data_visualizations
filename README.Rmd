@@ -1,20 +1,18 @@
----
-rmarkdown=TRUE
----s
 
 ---
 title: "Examples of basic data visualizing in phonetics"
 output: github_documents
 ---
 
-```{r}
-library(ggplot2)
-```
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+```{r}
+library(ggplot2)
+```
+
 * loading data frame *
 * Some basic data visualizations in R studio
 This data is from my linguistic field work *
