@@ -1,8 +1,7 @@
-    library(ggplot2)
-
--   loading data frame \*
 -   Some basic data visualizations in R studio This data is from my
     linguistic field work \*
+
+-   loading data frame
 
 <!-- -->
 
@@ -11,7 +10,13 @@
 Q plot
 ======
 
--   This quick plots shows the fundamental frequency of measured in the
+-   Load the package for plots
+
+<!-- -->
+
+    library(ggplot2)
+
+-   This quick plot shows the fundamental frequency of measured in the
     midpoint (y-axis) and onset of the vowel (x-axis) of six speakers.
 
 <!-- -->
@@ -22,6 +27,10 @@ Q plot
 
 ggplot with some more specifications
 ====================================
+
+-   Black and white with 'shape' to distinguish the levels
+
+<!-- -->
 
     ggplot() + geom_point(data = dat, aes(x = vowelOnsetF0, y = midpointF0, shape = Speaker)) +
       ggtitle("Midpoint of fundamental frequency")
