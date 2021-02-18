@@ -1,16 +1,10 @@
-# loading data fram
-dat <- read.csv("datLexMidpoint_ST_slope.csv", sep = ",")
+# loading data frame
+dat <- read.csv("subsetdataLexMidpointF0.csv", sep = ",")
 
-
-datN <- dat[dat$Label == "n" & dat$SentenceType == "F_H" , ]
-datN <- droplevels(datN)
-
-write.csv(datN, "/Users/Siri/Documents/Coding/R/R_visualizations/subsetdataLexMidpointF0.csv")
-
-
-# visualizing factors: StartOfDrop vs.	TCoG
+# load package for plots
 library(ggplot2)
 
+# visualizing factors: vowel onset of F0  vs.	midpoint F0 with random factor 'speaker'
 # quick plot
 qplot(vowelOnsetF0, midpointF0, data = datN, color = Speaker)
 
